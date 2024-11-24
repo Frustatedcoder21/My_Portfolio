@@ -9,7 +9,9 @@ const Project = () => {
    const [loading,setLoading]=useState(true);
   useEffect(()=>{
      const retrive=async()=>{
-      let val=await fetch('https://portfolio-backend-xuxv.onrender.com/api/data');
+      console.log(import.meta.env.VITE_Backend_URI);
+      
+      let val=await fetch(import.meta.env.VITE_Backend_URI);
       let ok=await val.json();
       setLoading(false);
       setData(ok);
