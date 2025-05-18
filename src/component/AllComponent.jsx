@@ -34,7 +34,7 @@ console.log(e.clientX,e.clientY);
     }}>
 <div
         ref={cursorRef}
-        className="w-[30px] h-[30px] rounded-full bg-blue-300 hidden shadow-2xl shadow-white md:fixed z-50 pointer-events-none opacity-30"
+        className="w-[30px] h-[30px] rounded-full bg-blue-300  shadow-2xl shadow-white fixed z-50 pointer-events-none opacity-30"
         style={{ transition: 'transform 0.03s linear' }} // optional smoothing
       ></div>
    <div className='nav w-full min-h-[10%] md:h-[10vh] '>

@@ -1,6 +1,13 @@
 import React from 'react'
-
+import ReactGA from 'react-ga4';
 const Landing = () => {
+  const handleClick=()=>{
+    ReactGA.event({
+      category:'Download',
+      action:'Download',
+      label:'Download Resume'
+    })
+  }
   return (
     <div className='w-full h-full py-5 bg-black flex flex-wrap gap-10  justify-around items-center'>
     <div className='image relative w-[300px] h-[380px] '>
@@ -15,7 +22,7 @@ const Landing = () => {
      
 
     <div className=' w-full flex justify-center items-center gap-10'>
-    <a href="./Mayank-Pandey.pdf" className='w-[200px] h-[40px] py-2 px-5 bg-blue-300 rounded-2xl text-center font-primary' download="Mayank-Pandey.pdf">Download Resume</a>
+    <a onClick={handleClick} href="./Mayank-Pandey.pdf" className='w-[200px] h-[40px] py-2 px-5 bg-blue-300 rounded-2xl text-center font-primary' download="Mayank-Pandey.pdf">Download Resume</a>
     {/* <a href="./Mayank-Pandey.pdf" className='w-[150px] h-[40px] py-2 px-5 bg-blue-300 rounded-2xl' download="Mayank-Pandey.pdf">Download Resume</a> */}
 
     </div>
